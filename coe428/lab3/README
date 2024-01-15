@@ -1,0 +1,21 @@
+1. I had comphrehended the concept of utillizing mycompare alogrithim and myswap. The files for mergeSort and insertionSort work, as many issues have been encountered, one of the problems were correcting the comparison values as they werent aranged in the correct order. But with a few correction to the code I was able to get the code running properly. insertionSort was found to be vaguely similar to the proffessors notes, with minor changes. 
+
+2. Analysis of the algorthim
+
+insertionSort:
+
+Best case: O(n)
+(According to the equation this means there are n comparisons, 0 swaps, 0 copy operations)
+ 
+Worst case: O(n^2)
+(According to the equation this means there are n(n-1)/2 comparisons and swaps, and (n-1) copy operations)
+
+Average case: O(n^2)
+(According to the equation this means there are n(n-1)/2 comparisons and swaps, and (n-1) copy operations)
+
+mergeSort:  
+best case: O(n * logn)
+worst case:  O(n * logn)
+average case:  O(n * logn)
+[There are (nlgn - n+1) comparisons]
+

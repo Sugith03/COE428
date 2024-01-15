@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "towers.h"
+
+int main(int argc, char **argv)
+{
+    int n = 3;
+    int from = 1;
+    int dest = 2;
+
+    if (argc >= 5){
+    fprintf(stderr, "Invalid input, there were to many command line arguments.\n");
+    exit(1);
+    }
+    else if (argc == 4)
+    {
+    n = atoi(argv[1]);
+    from = atoi(argv[2]);
+    dest = atoi(argv[3]);
+    if (from < 1 || from > 3)
+    {
+        fprintf(stderr, "Invalid input, inputs 2 and 3 cannot be less than or equal to 3.\n");
+        exit(1);
+    }
+    else if (dest < 1 || dest > 3)
+    {
+        fprintf(stderr, "Invalid input, inputs 2 and 3 cannot be less than or equal to 3.\n");
+        exit(1);
+    }
+    else if (from == dest){
+      fprintf(stderr,"you cannot have same numbers");
+    }
+    else if (n < 1)
+    {
+        fprintf(stderr, "Invalid input, input 1 cannot be less than 1.\n");
+        exit(1);
+    }
+    else
+    {
+        towers(n, from, dest);
+    }
+    }
+    else if (argc == 3)
+    {
+    fprintf(stderr, "Invalid input, there most be 1 or 3 command line arguments not 2.\n");
+    exit(1);
+    }
+    else if (argc == 2)
+    {
+    n = atoi(argv[1]);
+    if (n < 1)
+    {
+        fprintf(stderr, "Invalid input, input 1 cannot be less than 1.\n");
+        exit(1);
+    }
+    else
+    {
+        towers(n, from, dest);
+    }
+    }
+    else if(argc ==1)
+    {
+        towers(n, from, dest);
+    }
+    exit(0);
+}
+

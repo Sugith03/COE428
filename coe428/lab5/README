@@ -1,0 +1,15 @@
+To modify Requirement 1 to allow for self-balancing stand-alone tags we can add an additional check after step 2. If the tag ends with a '/' (slash) preceding the final >, then it is a stand-alone tag, and we can skip steps 3 and 4. We do not need to push the tag onto the stack or pop it off the stack since it is self-balancing. The modified 
+
+Algorithm would be:
+1. Read the input until the beginning of a tag is detected.
+2. Read the tag's identity.
+3. If the tag ends with a '/' (slash) preceding the final >, then it is a stand-alone tag. Skip steps 4 and 5.
+4. If the tag was a start-tag, push it onto the stack.
+5. If the tag is an end-tag, pop the stack and verify that the popped identity is the same as the end-tag just 
+processed.
+6. If the identities do not match, the XML expression is invalid.
+7. If they do match, then no error has been detected (yet!).
+8. If there is still input that has not yet been processed, go back to the first step.
+9. Otherwise (no more input), the input is valid unless the Stack is not empty.
+
+Modification, the algorithm will correctly handle self-balancing stand-alone tags in addition to start and end tags.

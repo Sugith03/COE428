@@ -1,0 +1,7 @@
+void mySort(int array[], unsigned int num_elements) {
+	betterSort(array [], 0, n-1);
+}
+
+Explanation:
+
+The betterSort funtion is used to sort first and last variables in a temporary location. This will allow to sort it in an accending manner. As mentioned in the lab manual, array to sort is data. In the array the parameter begins with zero, therefore "first" would represent the parameter 0. For "last", n-1 is used to sort the number of elements to sort.  
